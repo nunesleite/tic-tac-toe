@@ -18,6 +18,7 @@ function startGame() {
     isCircleTurn = false;
     cells.forEach(cell => {
         cell.classList.remove('x', 'circle');
+        cell.innerText = ''; // Clear previous text
         cell.addEventListener('click', handleClick, { once: true });
     });
     setStatusMessage(`Player X's turn`);
@@ -43,6 +44,7 @@ function setStatusMessage(message) {
 
 function placeMark(cell, currentClass) {
     cell.classList.add(currentClass);
+    cell.innerText = currentClass === 'x' ? 'X' : 'O'; // Set text for X and O
 }
 
 function checkWin(currentClass) {
@@ -72,3 +74,4 @@ function endGame(draw) {
 
 restartButton.addEventListener('click', startGame);
 startGame();
+
