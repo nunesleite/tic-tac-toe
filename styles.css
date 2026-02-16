@@ -31,6 +31,14 @@ body {
     background-color: #e0e0e0;
 }
 
+.x {
+    color: red; /* Color for X */
+}
+
+.circle {
+    color: green; /* Color for O */
+}
+
 .status {
     margin-top: 20px;
 }
